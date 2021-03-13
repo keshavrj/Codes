@@ -1,0 +1,14 @@
+z0=50;
+R=40;
+L=10e-5;
+C=10e-9;
+f=linspace(10e3,10e7,100);
+w=2*pi*f;
+X=1./(i*w*C);
+X1=(i*w*L);
+z1=1./(1./R+1./X1+1./X);
+y=(z1-z0)./(z1+z0);
+subplot(2,1,1);
+plot(real(y));
+subplot(2,1,2);
+plot(imag(y));

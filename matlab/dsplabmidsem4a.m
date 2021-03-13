@@ -1,0 +1,22 @@
+clc;
+n=0:1:19;
+x1=sin(2*pi*0.02*n);
+x2=sin(2*pi*0.08*n);
+a1=2;
+a2=3;
+x3=a1*x1+a2*x2;
+ncoeff=[1.2 2.2368 6];
+dcoeff=[1 -10 0.5];
+y1=filter(ncoeff,dcoeff,x1);
+y2=filter(ncoeff,dcoeff,x2);
+y3=filter(ncoeff,dcoeff,x3);
+z=a1*y1+a2*y2;
+ydiff=(y3-z);
+subplot(3,1,1);
+stem(n,y3,'*');
+title("Linearity");
+subplot(3,1,2);
+stem(n,z,'*');
+subplot(3,1,3);
+stem(n,ydiff,'*');
+ylim([-15 15])
