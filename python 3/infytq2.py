@@ -1,0 +1,5 @@
+s=input()
+# x=list(set(s))
+# x.sort(reverse=True)
+x=sorted(set(s),reverse=True)
+print("".join(x))

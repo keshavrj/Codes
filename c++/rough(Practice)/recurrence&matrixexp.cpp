@@ -53,7 +53,6 @@ while(n)
 
     For(0,dim,i)For(0,dim,j)a[i][j]=I[i][j];
 }
-
 int main()
 {
 fastio;
@@ -78,4 +77,3 @@ power(a,n-1,2);
 }
 return 0;
 }
-

@@ -14,15 +14,15 @@
 #define mod 1000000007
 using namespace std;
 #define maxx 100
-ll a[maxx][maxx]={0};
-ll I[maxx][maxx]={0};
+ll a[maxx][maxx];
+ll I[maxx][maxx];
 
 
 void multiply(ll I[][maxx],ll a[][maxx],ll dim)
 {
     ll res[dim+1][dim+1];
-    For(0,dim,i)
-    For(0,dim,j)
+        For(0,dim,i)
+        For(0,dim,j)
     {
         res[i][j]=0;
         For(0,dim,k)
@@ -32,22 +32,24 @@ void multiply(ll I[][maxx],ll a[][maxx],ll dim)
     For(0,dim,i)For(0,dim,j)I[i][j]=res[i][j];
 }
 
-void power(ll a[maxx][maxx],ll n,ll dim)
+void power(ll n,ll dim)
 {
     For(0,dim,i)
         For(0,dim,j)
-        {if(i==j) I[i][j]=1;
-        else I[i][j]=0;}
+        {
+            if(i==j)
+                I[i][j]=1;
+        }
 
-   // For(0,n,i)
-//        multiply(I,a,dim);
 while(n)
  {
      if(n&1)    /// if odd;
          multiply(I,a,dim),n--;
-         else{
-     multiply(a,a,dim);
-     n/=2;}
+    else
+    {
+         multiply(a,a,dim);
+         n/=2;
+    }
  }
 
 
@@ -58,10 +60,13 @@ int main()
 {
 fastio;
 tc{
-ll m,n;cin>>m>>n;
-For(0,m,i)For(0,m,j)cin>>a[i][j];
 
-power(a,n,m);
+ll m,n;cin>>m>>n;
+
+For(0,m,i)
+For(0,m,j)cin>>a[i][j];
+
+power(n,m);
 
 
 For(0,m,i)

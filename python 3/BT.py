@@ -5,4 +5,6 @@ class Node:
 
 class BT:
 	def __init__(self):
-		self.
+		self.root = None
+
+	
