@@ -133,11 +133,12 @@ void solve()
 signed main()
 {
     fast;
-    int t = 1;
-    cin >> t;
-    for(int i=1;i<=t;i++)
-    {
-    cout <<"Case #" << i <<": ";    
-    solve();
-    }
+    // int t = 1;
+    // cin >> t;
+    // for(int i=1;i<=t;i++)
+    // {
+    // cout <<"Case #" << i <<": ";    
+    // solve();
+    // }
+    cout<<MillerRabin(1000000007)<<endl;
 }

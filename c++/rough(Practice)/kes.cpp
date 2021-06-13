@@ -18,26 +18,12 @@ int main()
         freopen("output.txt","w",stdout);
     #endif
     fastio;
-int n,m,k,cnt=0;
-cin>>n>>m>>k;
-vi arr[n];
-for(int i=0;i<n;i++)
-{
-	for(int j=0;j<=k;j++)
-	{
-		int x;cin>>x;
-		arr[i].pb(x);
-	}
-}
-for(int i=0;i<n;i++)
-{
-	if(arr[i][k]<=10)
-	{
-		int sum=accumulate(arr[i].begin(), arr[i].end()-1, 0);
-		if(sum>=m)
-			cnt++;
-	}
-}
-cout<<cnt<<endl;
 
+   long long int a= 23697;
+    
+
+    // a<<=(31);
+    cout<<a<<endl;
+    // a>>=(31);
+    // cout<<a<<endl;
 }

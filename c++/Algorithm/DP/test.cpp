@@ -1,14 +1,16 @@
 #include <bits/stdc++.h>
+#define ll long long 
+#define vi vector<ll>
 using namespace std;
 int main()
 {	
-	freopen("output.txt","w",stdout);
-	int dp[10][10]={{}};
-	for(int i=0;i<10;i++)
-	{
-		for(int j=0;j<10;j++)
-			cout<<dp[i][j]<<" ";
-		cout<<endl;
-	}
+	ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);	
+ #ifndef ONLINE_JUDGE
+    freopen("input.txt","r", stdin);
+    freopen("output1.txt","w", stdout);
+  #endif
+   extern int x;
+   x=20;
 
+printf("%d", x);
 }
