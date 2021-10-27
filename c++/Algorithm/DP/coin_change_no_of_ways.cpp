@@ -16,7 +16,9 @@ int solve(int arr[], int n, int target)
 		{
 			if(arr[i-1]<=j)
 				dp[i][j]= dp[i][j-arr[i-1]]+ dp[i-1][j];
+							//take it 	   + don't take it;
 			else dp[i][j]= dp[i-1][j];
+						 //don't take it;
 		}
 	}
 	return dp[n][target];
@@ -24,7 +26,7 @@ int solve(int arr[], int n, int target)
 
 int main()
 {
-	freopen("input.txt","r",stdin);freopen("output.txt","w", stdout);
+	freopen("input1.txt","r",stdin);freopen("output.txt","w", stdout);
 	// memset(dp,-1,sizeof dp);
 	int arr[] = {1, 2, 3};
     int m = sizeof(arr)/sizeof(arr[0]);

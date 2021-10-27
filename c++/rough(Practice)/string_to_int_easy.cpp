@@ -13,8 +13,7 @@ int main()
 	while(ssx>>x)  
 	{
 		arr.push_back(x);
-		cout<<x<<", "<<" ";
 	}
-	cout<<endl<<"vector contents: ";
+	
 	for(auto z:arr)cout<<z<<" ";
 }

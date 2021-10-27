@@ -7,7 +7,11 @@
 using namespace std;
 bool m[102][102];
 int main()
-{
+{  
+    #ifndef ONLINE_JUDGE
+    freopen("input1.txt","r",stdin);
+    freopen("output.txt","w",stdout);
+    #endif
     ios_base :: sync_with_stdio(false);
     int t;cin>>t;while(t--)
     {
@@ -28,6 +32,12 @@ int main()
 
             }
         }
+         for(int i=1;i<=s.size();i++)
+    {
+        for(int j=1;j<=s.size();j++)
+            cout<<m[i][j]<<" ";
+        cout<<endl;
+    }
 
         int x= ansc;
         while((ansr--) && x>0)

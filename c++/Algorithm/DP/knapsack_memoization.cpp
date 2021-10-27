@@ -21,7 +21,7 @@ int knapsack(int wt[], int val[], int w, int n)
 int main()
 {
      
-   freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
+   // freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
     
     memset(dp,-1,sizeof(dp));
 	int val[] = { 60, 100, 120 };
